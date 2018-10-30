@@ -1,0 +1,9 @@
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\bin\Debug\jpwpprobanumerrazeloelo.exe
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\bin\Debug\jpwpprobanumerrazeloelo.pdb
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\obj\Debug\jpwpprobanumerrazeloelo.csprojAssemblyReference.cache
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\obj\Debug\jpwpprobanumerrazeloelo.Orient.resources
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\obj\Debug\jpwpprobanumerrazeloelo.Properties.Resources.resources
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\obj\Debug\jpwpprobanumerrazeloelo.csproj.GenerateResource.cache
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\obj\Debug\jpwpprobanumerrazeloelo.csproj.CoreCompileInputs.cache
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\obj\Debug\jpwpprobanumerrazeloelo.exe
+C:\Users\Mati\source\repos\jpwpprobanumerrazeloelo\jpwpprobanumerrazeloelo\obj\Debug\jpwpprobanumerrazeloelo.pdb
