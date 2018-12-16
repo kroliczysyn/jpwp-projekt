@@ -18,7 +18,7 @@ namespace Orient_
             //this.Text = "Start";
             this.BackColor = Color.Transparent;
             this.FlatStyle = FlatStyle.Popup;
-            this.BackgroundImage = Image.FromFile(@"C:\studia\semestr 5\jpwp projekt\jpwp-projekt\grafiki i dodatki\175x175\czerwony.png");
+            this.BackgroundImage = Image.FromFile(@"C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\Resources\czerwony.png");
         }
     }
 }

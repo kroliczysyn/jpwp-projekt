@@ -16,3 +16,12 @@ C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient!\Orient!\obj\Debug\Orient!.
 C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient!\Orient!\obj\Debug\Orient!.csproj.CoreCompileInputs.cache
 C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient!\Orient!\obj\Debug\Orient!.exe
 C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient!\Orient!\obj\Debug\Orient!.pdb
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\bin\Debug\Orient!.exe
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\bin\Debug\Orient!.pdb
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\obj\Debug\Orient!.csprojAssemblyReference.cache
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\obj\Debug\Orient_.Form1.resources
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\obj\Debug\Orient_.Properties.Resources.resources
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\obj\Debug\Orient!.csproj.GenerateResource.cache
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\obj\Debug\Orient!.csproj.CoreCompileInputs.cache
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\obj\Debug\Orient!.exe
+C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\obj\Debug\Orient!.pdb

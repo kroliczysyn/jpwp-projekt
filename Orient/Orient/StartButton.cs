@@ -19,22 +19,8 @@ namespace Orient_
             this.Text = "Start";
             this.BackColor = Color.Transparent;
             this.FlatStyle = FlatStyle.Popup;
-            this.Click += StartButton_Click;
+            
         }
-        void StartButton_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            RedBall RB = new RedBall();
-            RB.Location = new Point(300, 300);
-            Controls.Add(RB);
-            int score = rnd.Next(0, 0);
-            switch (score)
-            {
-                case 0:
-                    RedBall b = new RedBall();
-                    Controls.Add(b);
-                    break;
-            }
-        }
+        
     }
 }

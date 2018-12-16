@@ -11,16 +11,21 @@ namespace Orient_
 {
     public partial class Form1 : Form
     {
+        StartButton SB = new StartButton();
+        RedBall RB = new RedBall();
         public Form1()
         {
             InitializeComponent();
-            StartButton a = new StartButton();
-            //RedBall b = new RedBall();
-            Controls.Add(a);
-            //Controls.Add(b);
+            SB.Click += StartButton_Click;
+            Controls.Add(SB);
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        public void StartButton_Click(object sender, EventArgs e)
+        {
+            SB.Visible = false;
+            RB.Location = new Point(300, 300);
+            this.Controls.Add(RB);
+        }
+            private void Form1_Load(object sender, EventArgs e)
         {
 
         }

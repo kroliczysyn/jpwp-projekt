@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orient!", "Orient!\Orient!.csproj", "{45D59F1C-6318-436C-8524-12586BAD6562}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orient!", "Orient\Orient!.csproj", "{45D59F1C-6318-436C-8524-12586BAD6562}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {22B8410F-F9D7-4BED-8E0D-3B5347D631E1}
+		SolutionGuid = {402985C0-A0FC-46B6-BA29-2AC036BBE21C}
 	EndGlobalSection
 EndGlobal
