@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlueBall.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,9 +58,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="StartButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Time.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
