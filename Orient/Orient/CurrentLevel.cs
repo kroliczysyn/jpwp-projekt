@@ -13,9 +13,10 @@ namespace Orient_
     {
         public CurrentLevel() : base()
         {
-            this.Size = new Size(50, 200);
+            this.Size = new Size(50, 500);
             this.Location = new Point(500, 500);
             this.Visible = true;
+            this.ReadOnly = true;
         }
     }
 }

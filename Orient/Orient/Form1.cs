@@ -11,13 +11,15 @@ namespace Orient_
 {
     public partial class Form1 : Form
     {
-        private int good = 0;
-        private int bad = 0;
         CurrentLevel poziom = new CurrentLevel();
         StartButton SB = new StartButton();
         BlueBall BB = new BlueBall();
         RedBall RB = new RedBall();
         Random r = new Random();
+        private int numer = 0;
+        private int good = 0;
+        private int bad = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +39,8 @@ namespace Orient_
         private int lastBall = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int x, y, numer = 0;
+            poziom.KeyDown += poziom_KeyUp;
+            int x, y = 0;
             x = r.Next(0, 300);
             y = r.Next(0, 300);
             numer = r.Next(0, 2);
@@ -56,7 +59,7 @@ namespace Orient_
                     RB.Location = new Point(x, y);
                     this.Controls.Add(RB);
                     lastBall = 0;
-                    RB.KeyDown += RB_KeyDown;
+                    //RB.KeyDown += RB_KeyDown;
                     break;
                 case 1:
                     BB.Location = new Point(x, y);
@@ -65,7 +68,18 @@ namespace Orient_
                     break;
             }
         }
-        private void RB_KeyDown(object sender, KeyEventArgs e)
+        private void poziom_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(numer == 0)
+            {
+                if(e.KeyCode == Keys.A)
+                {
+                    good++;
+                    poziom.Text += "obecny wynik: " + good;
+                }
+            }
+        }
+        /*private void RB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.A)
             {
@@ -76,6 +90,6 @@ namespace Orient_
             {
                 this.Controls.Remove(RB);
             }
-        }
+        }*/
     }
 }
