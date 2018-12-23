@@ -11,6 +11,9 @@ namespace Orient_
 {
     public partial class Form1 : Form
     {
+        private int good = 0;
+        private int bad = 0;
+        CurrentLevel poziom = new CurrentLevel();
         StartButton SB = new StartButton();
         BlueBall BB = new BlueBall();
         RedBall RB = new RedBall();
@@ -18,6 +21,7 @@ namespace Orient_
         public Form1()
         {
             InitializeComponent();
+            Controls.Add(poziom);
             SB.Click += StartButton_Click;
             Controls.Add(SB);
         }
@@ -26,7 +30,7 @@ namespace Orient_
             SB.Visible = false;
             timer1.Enabled = true;
         }
-            private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
@@ -52,6 +56,7 @@ namespace Orient_
                     RB.Location = new Point(x, y);
                     this.Controls.Add(RB);
                     lastBall = 0;
+                    RB.KeyDown += RB_KeyDown;
                     break;
                 case 1:
                     BB.Location = new Point(x, y);
@@ -59,7 +64,18 @@ namespace Orient_
                     lastBall = 1;
                     break;
             }
-            
+        }
+        private void RB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                good++;
+                poziom.Text += "obecny wynik: " + good;
+            }
+            else
+            {
+                this.Controls.Remove(RB);
+            }
         }
     }
 }
