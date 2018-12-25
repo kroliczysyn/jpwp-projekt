@@ -16,6 +16,7 @@ namespace Orient_
         BlueBall BB = new BlueBall();
         RedBall RB = new RedBall();
         Random r = new Random();
+        private int check = 0;
         private int numer = 0;
         private int good = 0;
         private int bad = 0;
@@ -24,6 +25,7 @@ namespace Orient_
             InitializeComponent();
             SB.Click += StartButton_Click;
             Controls.Add(SB);
+            poziom.KeyUp += poziom_KeyUp;
         }
         public void StartButton_Click(object sender, EventArgs e)
         {
@@ -38,7 +40,8 @@ namespace Orient_
         private int lastBall = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            poziom.KeyUp += poziom_KeyUp;
+            poziom.Text = "g:" + good + "b:" + bad;
+            check = 0;
             int x, y = 0;
             x = r.Next(0, 300);
             y = r.Next(0, 300);
@@ -68,12 +71,20 @@ namespace Orient_
         }
         private void poziom_KeyUp(object sender, KeyEventArgs e)
         {
-            if(numer == 0)
+            if(check == 0)
             {
-                if(e.KeyCode == Keys.A)
+                if (numer == 0)
                 {
-                    good++;
-                    poziom.Text = "Obecny wynik: " + good;
+                    if (e.KeyCode == Keys.A)
+                    {
+                        good++;
+                        check = 1;
+                    }
+                    else
+                    {
+                        bad++;
+                        check = 1;
+                    }
                 }
             }
         }
