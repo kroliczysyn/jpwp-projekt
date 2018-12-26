@@ -16,6 +16,7 @@ namespace Orient_
         BlueBall BB = new BlueBall();
         RedBall RB = new RedBall();
         Random r = new Random();
+        private int level = 0;
         private int check = 0;
         private int numer = 0;
         private int good = 0;
@@ -40,6 +41,51 @@ namespace Orient_
         private int lastBall = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (good == 15)
+            {
+                if (level == 5)
+                {
+                    level = 5;
+                }
+                else
+                {
+                    level++;
+                }
+            }
+            switch(level)
+            {
+                case 0:
+                    timer1.Stop();
+                    timer1.Interval = 1000;
+                    timer1.Start();
+                    break;
+                case 1:
+                    timer1.Stop();
+                    timer1.Interval = 750;
+                    timer1.Start();
+                    break;
+                case 2:
+                    timer1.Stop();
+                    timer1.Interval = 700;
+                    timer1.Start();
+                    break;
+                case 3:
+                    timer1.Stop();
+                    timer1.Interval = 600;
+                    timer1.Start();
+                    break;
+                case 4:
+                    timer1.Stop();
+                    timer1.Interval = 500;
+                    timer1.Start();
+                    break;
+                case 5:
+                    timer1.Stop();
+                    timer1.Interval = 500;
+                    timer1.Start();
+                    break;
+            }
+            
             poziom.Text = "g:" + good + "b:" + bad;
             check = 0;
             int x, y = 0;
@@ -76,6 +122,19 @@ namespace Orient_
                 if (numer == 0)
                 {
                     if (e.KeyCode == Keys.A)
+                    {
+                        good++;
+                        check = 1;
+                    }
+                    else
+                    {
+                        bad++;
+                        check = 1;
+                    }
+                }
+                else if (numer == 1)
+                {
+                    if (e.KeyCode == Keys.S)
                     {
                         good++;
                         check = 1;

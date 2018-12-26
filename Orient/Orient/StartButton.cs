@@ -19,7 +19,6 @@ namespace Orient_
             this.Text = "Start";
             this.BackColor = Color.Transparent;
             this.FlatStyle = FlatStyle.Popup;
-            
         }
         
     }
