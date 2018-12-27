@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Orient_
 {
-    class BlueBall : Button
+    class BlueBall : PictureBox
     {
         public BlueBall() : base()
         {
@@ -15,7 +15,6 @@ namespace Orient_
             this.Visible = true;
             this.Size = new Size(175, 175);
             this.BackColor = Color.Transparent;
-            this.FlatStyle = FlatStyle.Popup;
             this.BackgroundImage = Image.FromFile(@"C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\Resources\niebieski.png");
         }
     }

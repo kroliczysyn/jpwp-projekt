@@ -42,7 +42,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Orient_.Properties.Resources.tło_jpwp1280x768;
-            this.ClientSize = new System.Drawing.Size(1264, 730);
+            this.ClientSize = new System.Drawing.Size(1264, 692);
+            this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(1280, 768);
             this.Name = "Form1";
             this.Text = "Orient!";

@@ -21,8 +21,10 @@ namespace Orient_
         private int numer = 0;
         private int good = 0;
         private int bad = 0;
+        private int zadymka = 0;
         public Form1()
         {
+            this.Size = new Size(1280, 730);
             InitializeComponent();
             SB.Click += StartButton_Click;
             Controls.Add(SB);
@@ -30,6 +32,7 @@ namespace Orient_
         }
         public void StartButton_Click(object sender, EventArgs e)
         {
+            poziom.BackColor = Color.Maroon;
             Controls.Add(poziom);
             SB.Visible = false;
             timer1.Enabled = true;
@@ -41,6 +44,31 @@ namespace Orient_
         private int lastBall = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            zadymka++;
+            if (zadymka < 10)
+            {
+                poziom.BackColor = Color.Maroon;
+            }
+            else if (zadymka < 20)
+            {
+                poziom.BackColor = Color.IndianRed;
+            }
+            else if (zadymka < 30)
+            {
+                poziom.BackColor = Color.FromArgb(255, 236, 107, 45);
+            }
+            else if (zadymka < 40)
+            {
+                poziom.BackColor = Color.FromArgb(255, 248, 242, 31);
+            }
+            else if (zadymka < 50)
+            {
+                poziom.BackColor = Color.FromArgb(255, 139, 253, 26);
+            }
+            else
+            {
+                poziom.BackColor = Color.Lime;
+            }
             if (good == 15)
             {
                 if (level == 5)
@@ -56,7 +84,7 @@ namespace Orient_
             {
                 case 0:
                     timer1.Stop();
-                    timer1.Interval = 1000;
+                    timer1.Interval = 300;//1000;
                     timer1.Start();
                     break;
                 case 1:
@@ -89,8 +117,8 @@ namespace Orient_
             poziom.Text = "g:" + good + "b:" + bad;
             check = 0;
             int x, y = 0;
-            x = r.Next(0, 300);
-            y = r.Next(0, 300);
+            x = r.Next(0, 1100);
+            y = r.Next(0, 400);
             numer = r.Next(0, 2);
             switch (lastBall)
             {
