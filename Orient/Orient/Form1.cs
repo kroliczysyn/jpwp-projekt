@@ -21,7 +21,7 @@ namespace Orient_
         private int numer = 0;
         private int good = 0;
         private int bad = 0;
-        private int zadymka = 0;
+        //private int zadymka = 0;
         public Form1()
         {
             this.Size = new Size(1280, 730);
@@ -32,7 +32,8 @@ namespace Orient_
         }
         public void StartButton_Click(object sender, EventArgs e)
         {
-            poziom.BackColor = Color.Maroon;
+            poziom.BackColor = Color.FromArgb(255, 255, 0, 0);
+            poziom.Text = "Aktualny poziom 0";
             Controls.Add(poziom);
             SB.Visible = false;
             timer1.Enabled = true;
@@ -44,31 +45,32 @@ namespace Orient_
         private int lastBall = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            zadymka++;
-            if (zadymka < 10)
+            
+            //zadymka++;
+            /*if (zadymka < 5)
             {
-                poziom.BackColor = Color.Maroon;
+                poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
+            }
+            else if (zadymka < 10)
+            {
+                poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
+            }
+            else if (zadymka < 15)
+            {
+                poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
             }
             else if (zadymka < 20)
             {
-                poziom.BackColor = Color.IndianRed;
+                poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
             }
-            else if (zadymka < 30)
+            else if (zadymka < 25)
             {
-                poziom.BackColor = Color.FromArgb(255, 236, 107, 45);
-            }
-            else if (zadymka < 40)
-            {
-                poziom.BackColor = Color.FromArgb(255, 248, 242, 31);
-            }
-            else if (zadymka < 50)
-            {
-                poziom.BackColor = Color.FromArgb(255, 139, 253, 26);
+                poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
             }
             else
             {
-                poziom.BackColor = Color.Lime;
-            }
+                poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
+            }*/
             if (good == 15)
             {
                 if (level == 5)
@@ -83,38 +85,43 @@ namespace Orient_
             switch(level)
             {
                 case 0:
+                    poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
                     timer1.Stop();
-                    timer1.Interval = 300;//1000;
+                    timer1.Interval = 800;//1000;
                     timer1.Start();
                     break;
                 case 1:
+                    poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
                     timer1.Stop();
                     timer1.Interval = 750;
                     timer1.Start();
                     break;
                 case 2:
+                    poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
                     timer1.Stop();
                     timer1.Interval = 700;
                     timer1.Start();
                     break;
                 case 3:
+                    poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
                     timer1.Stop();
                     timer1.Interval = 600;
                     timer1.Start();
                     break;
                 case 4:
+                    poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
                     timer1.Stop();
                     timer1.Interval = 500;
                     timer1.Start();
                     break;
                 case 5:
+                    poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
                     timer1.Stop();
                     timer1.Interval = 500;
                     timer1.Start();
                     break;
             }
-            
-            poziom.Text = "g:" + good + "b:" + bad;
+            poziom.Text = "Aktualny poziom: " + level;
             check = 0;
             int x, y = 0;
             x = r.Next(0, 1100);
