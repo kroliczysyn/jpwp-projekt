@@ -21,8 +21,13 @@ namespace Orient_
         private int numer = 0;
         private int good = 0;
         private int bad = 0;
+        private int lastBall = 0;
+        private int lastX = 0;
+        private int lastY = 0;
         public Form1()
         {
+            var bmp = new Bitmap(Orient_.Properties.Resources.tło_jpwp1280x768);
+            this.BackgroundImage = bmp;
             this.Size = new Size(1280, 730);
             InitializeComponent();
             SB.Click += StartButton_Click;
@@ -32,7 +37,7 @@ namespace Orient_
         public void StartButton_Click(object sender, EventArgs e)
         {
             poziom.BackColor = Color.FromArgb(255, 255, 0, 0);
-            poziom.Text = "Aktualny poziom 0";
+            poziom.Text = "Aktualny poziom E+";
             Controls.Add(poziom);
             SB.Visible = false;
             timer1.Enabled = true;
@@ -41,7 +46,6 @@ namespace Orient_
         {
 
         }
-        private int lastBall = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (good == 15)
@@ -60,46 +64,63 @@ namespace Orient_
             {
                 case 0:
                     poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
+                    poziom.Text = "Aktualny poziom E+";
                     timer1.Stop();
                     timer1.Interval = 800;//1000;
                     timer1.Start();
                     break;
                 case 1:
                     poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
+                    poziom.Text = "Aktualny poziom E";
                     timer1.Stop();
                     timer1.Interval = 750;
                     timer1.Start();
                     break;
                 case 2:
                     poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
+                    poziom.Text = "Aktualny poziom D";
                     timer1.Stop();
                     timer1.Interval = 700;
                     timer1.Start();
                     break;
                 case 3:
                     poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
+                    poziom.Text = "Aktualny poziom C";
                     timer1.Stop();
                     timer1.Interval = 600;
                     timer1.Start();
                     break;
                 case 4:
                     poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
+                    poziom.Text = "Aktualny poziom B";
                     timer1.Stop();
                     timer1.Interval = 500;
                     timer1.Start();
                     break;
                 case 5:
                     poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
+                    poziom.Text = "Aktualny poziom A";
                     timer1.Stop();
-                    timer1.Interval = 500;
+                    timer1.Interval = 450;
                     timer1.Start();
                     break;
             }
-            poziom.Text = "Aktualny poziom: " + level;
             check = 0;
-            int x, y = 0;
+            int x, y, diffX, diffY = 0;
             x = r.Next(0, 1100);
+            diffX = lastX - x;
+            if (Math.Abs(diffX) < 175)
+            {
+                x = r.Next(0, 1100);
+            }
             y = r.Next(0, 400);
+            diffY = lastY - y;
+            if (Math.Abs(diffY) <175)
+            {
+                y = r.Next(0, 400);
+            }
+            lastY = y;
+            lastX = x;
             numer = r.Next(0, 2);
             switch (lastBall)
             {

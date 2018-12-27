@@ -17,7 +17,9 @@ namespace Orient_
             this.Visible = true;
             this.Size = new Size(175, 175);
             this.TabStop = false;
-            this.Image = Image.FromFile(@"C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\Resources\czerwony.png");
+            var bmp = new Bitmap(Orient_.Properties.Resources.czerwony);
+            this.Image = bmp;
+            //this.Image = Image.FromFile(@"C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\Resources\czerwony.png");
         }
     }
 }

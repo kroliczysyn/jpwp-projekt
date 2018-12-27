@@ -89,5 +89,23 @@
   <ItemGroup>
     <None Include="Resources\tło jpwp1280x768.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabelka.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\czerwony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\niebieski.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spacja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zielony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zolty.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

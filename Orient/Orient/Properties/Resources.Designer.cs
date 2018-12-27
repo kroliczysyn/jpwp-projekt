@@ -63,9 +63,69 @@ namespace Orient_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap czerwony {
+            get {
+                object obj = ResourceManager.GetObject("czerwony", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap niebieski {
+            get {
+                object obj = ResourceManager.GetObject("niebieski", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spacja {
+            get {
+                object obj = ResourceManager.GetObject("spacja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabelka {
+            get {
+                object obj = ResourceManager.GetObject("tabelka", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tło_jpwp1280x768 {
             get {
-                object obj = ResourceManager.GetObject("tło jpwp1280x768", resourceCulture);
+                object obj = ResourceManager.GetObject("tło_jpwp1280x768", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zielony {
+            get {
+                object obj = ResourceManager.GetObject("zielony", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zolty {
+            get {
+                object obj = ResourceManager.GetObject("zolty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

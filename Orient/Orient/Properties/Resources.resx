@@ -118,7 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tło jpwp1280x768" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="czerwony" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\czerwony.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="niebieski" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\niebieski.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spacja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spacja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tabelka" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabelka.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tło_jpwp1280x768" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tło jpwp1280x768.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zielony" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zielony.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zolty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zolty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

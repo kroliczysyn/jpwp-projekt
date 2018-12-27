@@ -15,7 +15,9 @@ namespace Orient_
             this.Visible = true;
             this.Size = new Size(175, 175);
             this.BackColor = Color.Transparent;
-            this.BackgroundImage = Image.FromFile(@"C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\Resources\niebieski.png");
+            var bmp = new Bitmap(Orient_.Properties.Resources.niebieski);
+            this.Image = bmp;
+            // this.BackgroundImage = Image.FromFile(@"C:\studia\semestr 5\jpwp projekt\jpwp-projekt\Orient\Orient\Resources\niebieski.png");
         }
     }
 }
