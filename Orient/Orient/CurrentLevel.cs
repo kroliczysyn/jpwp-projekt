@@ -26,7 +26,8 @@ namespace Orient_
             this.BackColor = Color.FromArgb(255, 139, 253, 26);  //b rating
             this.BackColor = Color.Maroon;                       //a rating
             */
-            
+            this.Font = new Font("Castellar", 15.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = Color.WhiteSmoke;
         }
     }
 }

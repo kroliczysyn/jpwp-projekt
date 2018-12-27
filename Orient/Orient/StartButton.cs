@@ -9,17 +9,16 @@ namespace Orient_
 {
     class StartButton : Button
     {
-        Random rnd = new Random();
         public StartButton() : base()
         {
-            this.ForeColor = Color.BurlyWood;
             this.Location = new Point(100, 100);
             this.Visible = true;
             this.Size = new Size(200, 50);
             this.Text = "Start";
             this.BackColor = Color.Transparent;
             this.FlatStyle = FlatStyle.Popup;
+            this.Font = new Font("Castellar", 15.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = Color.WhiteSmoke;
         }
-        
     }
 }
