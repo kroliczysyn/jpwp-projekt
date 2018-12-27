@@ -21,7 +21,6 @@ namespace Orient_
         private int numer = 0;
         private int good = 0;
         private int bad = 0;
-        //private int zadymka = 0;
         public Form1()
         {
             this.Size = new Size(1280, 730);
@@ -45,34 +44,9 @@ namespace Orient_
         private int lastBall = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            //zadymka++;
-            /*if (zadymka < 5)
-            {
-                poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
-            }
-            else if (zadymka < 10)
-            {
-                poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
-            }
-            else if (zadymka < 15)
-            {
-                poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
-            }
-            else if (zadymka < 20)
-            {
-                poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
-            }
-            else if (zadymka < 25)
-            {
-                poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
-            }
-            else
-            {
-                poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
-            }*/
             if (good == 15)
             {
+                good = 0;
                 if (level == 5)
                 {
                     level = 5;
