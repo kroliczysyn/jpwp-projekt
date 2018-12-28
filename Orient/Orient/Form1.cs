@@ -62,7 +62,19 @@ namespace Orient_
                     level++;
                 }
             }
-            switch(level)
+            if (bad == 5)
+            {
+                bad = 0;
+                if (level == 0)
+                {
+                    level = 0;
+                }
+                else
+                {
+                    level--;
+                }
+            }
+            switch (level)
             {
                 case 0:
                     poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
@@ -169,7 +181,7 @@ namespace Orient_
             {
                 if (numer == 0)
                 {
-                    if (e.KeyCode == Keys.A)
+                    if (e.KeyCode == Keys.Q)
                     {
                         good++;
                         check = 1;
@@ -182,7 +194,7 @@ namespace Orient_
                 }
                 else if (numer == 1)
                 {
-                    if (e.KeyCode == Keys.S)
+                    if (e.KeyCode == Keys.A)
                     {
                         good++;
                         check = 1;
@@ -195,7 +207,7 @@ namespace Orient_
                 }
                 else if (numer == 2)
                 {
-                    if (e.KeyCode == Keys.W)
+                    if (e.KeyCode == Keys.P)
                     {
                         good++;
                         check = 1;
@@ -208,7 +220,7 @@ namespace Orient_
                 }
                 else if (numer == 3)
                 {
-                    if (e.KeyCode == Keys.D)
+                    if (e.KeyCode == Keys.L)
                     {
                         good++;
                         check = 1;

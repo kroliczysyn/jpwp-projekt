@@ -16,7 +16,7 @@ namespace Orient_
             this.Size = new Size(175, 175);
             this.BackColor = Color.Transparent;
             var bmp = new Bitmap(Orient_.Properties.Resources.niebieski);
-            this.Image = bmp;
+            this.Image = bmp; 
         }
     }
 }
