@@ -14,7 +14,9 @@ namespace Orient_
         CurrentLevel poziom = new CurrentLevel();
         StartButton SB = new StartButton();
         BlueBall BB = new BlueBall();
+        GreenBall GB = new GreenBall();
         RedBall RB = new RedBall();
+        YellowBall YB = new YellowBall();
         Random r = new Random();
         private int level = 0;
         private int check = 0;
@@ -121,7 +123,7 @@ namespace Orient_
             }
             lastY = y;
             lastX = x;
-            numer = r.Next(0, 2);
+            numer = r.Next(0, 4);
             switch (lastBall)
             {
                 case 0:
@@ -129,6 +131,12 @@ namespace Orient_
                     break;
                 case 1:
                     this.Controls.Remove(BB);
+                    break;
+                case 2:
+                    this.Controls.Remove(GB);
+                    break;
+                case 3:
+                    this.Controls.Remove(YB);
                     break;
             }
             switch (numer)
@@ -142,6 +150,16 @@ namespace Orient_
                     BB.Location = new Point(x, y);
                     this.Controls.Add(BB);
                     lastBall = 1;
+                    break;
+                case 2:
+                    BB.Location = new Point(x, y);
+                    this.Controls.Add(GB);
+                    lastBall = 2;
+                    break;
+                case 3:
+                    BB.Location = new Point(x, y);
+                    this.Controls.Add(YB);
+                    lastBall = 3;
                     break;
             }
         }
@@ -165,6 +183,32 @@ namespace Orient_
                 else if (numer == 1)
                 {
                     if (e.KeyCode == Keys.S)
+                    {
+                        good++;
+                        check = 1;
+                    }
+                    else
+                    {
+                        bad++;
+                        check = 1;
+                    }
+                }
+                else if (numer == 2)
+                {
+                    if (e.KeyCode == Keys.W)
+                    {
+                        good++;
+                        check = 1;
+                    }
+                    else
+                    {
+                        bad++;
+                        check = 1;
+                    }
+                }
+                else if (numer == 3)
+                {
+                    if (e.KeyCode == Keys.D)
                     {
                         good++;
                         check = 1;
