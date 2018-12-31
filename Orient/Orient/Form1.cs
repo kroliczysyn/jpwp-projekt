@@ -12,6 +12,7 @@ namespace Orient_
     public partial class Form1 : Form
     {
         CurrentLevel poziom = new CurrentLevel();
+        ExitButton EB = new ExitButton();
         StartButton SB = new StartButton();
         BlueBall BB = new BlueBall();
         GreenBall GB = new GreenBall();
@@ -34,15 +35,26 @@ namespace Orient_
             InitializeComponent();
             SB.Click += StartButton_Click;
             Controls.Add(SB);
+            Controls.Add(EB);
+            EB.Click += ExitButton_Click;
+            CofButton.Visible = false;
             poziom.KeyUp += poziom_KeyUp;
         }
         public void StartButton_Click(object sender, EventArgs e)
         {
+            CofButton.Visible = true;
+            InfoButton.Visible = false;
+            CGButton.Visible = false;
+            Controls.Remove(EB);
             poziom.BackColor = Color.FromArgb(255, 255, 0, 0);
             poziom.Text = "Aktualny poziom E+";
             Controls.Add(poziom);
-            SB.Visible = false;
+            Controls.Remove(SB);
             timer1.Enabled = true;
+        }
+        public void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -232,6 +244,34 @@ namespace Orient_
                     }
                 }
             }
+        }
+
+        private void CofButton_Click(object sender, EventArgs e)
+        {
+            Controls.Remove(poziom);
+            switch (lastBall)
+            {
+                case 0:
+                    this.Controls.Remove(RB);
+                    break;
+                case 1:
+                    this.Controls.Remove(BB);
+                    break;
+                case 2:
+                    this.Controls.Remove(GB);
+                    break;
+                case 3:
+                    this.Controls.Remove(YB);
+                    break;
+            }
+            InfoButton.Visible = true;
+            CGButton.Visible = true;
+            Controls.Add(SB);
+            Controls.Add(EB);
+            timer1.Stop();
+            timer1.Enabled = false;
+            good = 0;
+            bad = 0;
         }
     }
 }

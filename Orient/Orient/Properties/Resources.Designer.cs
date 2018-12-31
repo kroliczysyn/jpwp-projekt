@@ -83,16 +83,6 @@ namespace Orient_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap spacja {
-            get {
-                object obj = ResourceManager.GetObject("spacja", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap tabelka {
             get {
                 object obj = ResourceManager.GetObject("tabelka", resourceCulture);

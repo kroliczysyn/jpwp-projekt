@@ -18,14 +18,6 @@ namespace Orient_
             this.Location = new Point(10, 650);
             this.Visible = true;
             this.ReadOnly = true;
-            /*
-            this.BackColor = Color.Maroon;                       //e+ rating
-            this.BackColor = Color.IndianRed;                    //e rating
-            this.BackColor = Color.FromArgb(255, 236, 107, 45);  //d rating
-            this.BackColor = Color.FromArgb(255, 248, 242, 31);  //c rating
-            this.BackColor = Color.FromArgb(255, 139, 253, 26);  //b rating
-            this.BackColor = Color.Maroon;                       //a rating
-            */
             this.Font = new Font("Castellar", 15.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = Color.WhiteSmoke;
         }
