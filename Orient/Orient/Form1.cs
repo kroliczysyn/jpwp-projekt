@@ -89,6 +89,7 @@ namespace Orient_
             switch (level)
             {
                 case 0:
+                    poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
                     poziom.Text = "Aktualny poziom E+";
                     timer1.Stop();
@@ -96,6 +97,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 1:
+                    poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
                     poziom.Text = "Aktualny poziom E";
                     timer1.Stop();
@@ -103,6 +105,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 2:
+                    poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
                     poziom.Text = "Aktualny poziom D";
                     timer1.Stop();
@@ -110,6 +113,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 3:
+                    poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
                     poziom.Text = "Aktualny poziom C";
                     timer1.Stop();
@@ -117,6 +121,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 4:
+                    poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
                     poziom.Text = "Aktualny poziom B";
                     timer1.Stop();
@@ -124,6 +129,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 5:
+                    poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
                     poziom.Text = "Aktualny poziom A";
                     timer1.Stop();
@@ -147,7 +153,7 @@ namespace Orient_
             }
             lastY = y;
             lastX = x;
-            numer = r.Next(0, 4);
+            numer = r.Next(0, 1);
             switch (lastBall)
             {
                 case 0:

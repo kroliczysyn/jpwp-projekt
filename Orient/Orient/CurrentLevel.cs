@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Orient_
 {
-    class CurrentLevel : TextBox
+    class CurrentLevel : TextBox //Label
     {
         public CurrentLevel() : base()
         {
