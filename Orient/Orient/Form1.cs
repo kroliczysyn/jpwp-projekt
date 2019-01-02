@@ -154,7 +154,7 @@ namespace Orient_
             }
             lastY = y;
             lastX = x;
-            numer = r.Next(0, 1);
+            numer = r.Next(0, 4);
             switch (lastBall)
             {
                 case 0:

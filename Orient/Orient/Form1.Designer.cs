@@ -98,9 +98,9 @@
             // CGLabel
             // 
             this.CGLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CGLabel.Font = new System.Drawing.Font("Castellar", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CGLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CGLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CGLabel.Location = new System.Drawing.Point(255, 310);
+            this.CGLabel.Location = new System.Drawing.Point(253, 290);
             this.CGLabel.Name = "CGLabel";
             this.CGLabel.Size = new System.Drawing.Size(761, 187);
             this.CGLabel.TabIndex = 4;
