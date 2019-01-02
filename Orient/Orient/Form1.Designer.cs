@@ -47,6 +47,7 @@
             this.CLabel = new System.Windows.Forms.Label();
             this.BLabel = new System.Windows.Forms.Label();
             this.ALabel = new System.Windows.Forms.Label();
+            this.CongratsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PBTabelka)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,12 +263,26 @@
             this.ALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ALabel.Visible = false;
             // 
+            // CongratsLabel
+            // 
+            this.CongratsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CongratsLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CongratsLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.CongratsLabel.Location = new System.Drawing.Point(460, 400);
+            this.CongratsLabel.Name = "CongratsLabel";
+            this.CongratsLabel.Size = new System.Drawing.Size(360, 30);
+            this.CongratsLabel.TabIndex = 16;
+            this.CongratsLabel.Text = "Gratulacje, twoj refleks jest wzorowy!";
+            this.CongratsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CongratsLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Orient_.Properties.Resources.tło_jpwp1280x768;
             this.ClientSize = new System.Drawing.Size(1264, 692);
+            this.Controls.Add(this.CongratsLabel);
             this.Controls.Add(this.ALabel);
             this.Controls.Add(this.BLabel);
             this.Controls.Add(this.CLabel);
@@ -287,6 +302,7 @@
             this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(1280, 768);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orient!";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBTabelka)).EndInit();
@@ -313,6 +329,7 @@
         private System.Windows.Forms.Label CLabel;
         private System.Windows.Forms.Label BLabel;
         private System.Windows.Forms.Label ALabel;
+        private System.Windows.Forms.Label CongratsLabel;
     }
 }
 

@@ -59,7 +59,7 @@ namespace Orient_
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            poziom.KeyUp += poziom_KeyUp;
+                poziom.KeyUp += poziom_KeyUp;
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -154,7 +154,7 @@ namespace Orient_
             }
             lastY = y;
             lastX = x;
-            numer = r.Next(0, 4);
+            numer = r.Next(0, 1);
             switch (lastBall)
             {
                 case 0:
@@ -192,6 +192,27 @@ namespace Orient_
                     this.Controls.Add(YB);
                     lastBall = 3;
                     break;
+            }
+            if (good == 1 && level == 5)
+            {
+                timer1.Stop();
+                switch (lastBall)
+                {
+                    case 0:
+                        this.Controls.Remove(RB);
+                        break;
+                    case 1:
+                        this.Controls.Remove(BB);
+                        break;
+                    case 2:
+                        this.Controls.Remove(GB);
+                        break;
+                    case 3:
+                        this.Controls.Remove(YB);
+                        break;
+                }
+                Controls.Remove(poziom);
+                CongratsLabel.Visible = true;
             }
         }
         private void poziom_KeyUp(object sender, KeyEventArgs e)
@@ -276,6 +297,7 @@ namespace Orient_
             InfoLabel.Visible = false;
             PBTabelka.Visible = false;
             CofButton.Visible = false;
+            CongratsLabel.Visible = false;
             Controls.Add(SB);
             Controls.Add(EB);
             timer1.Stop();
