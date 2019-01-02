@@ -123,4 +123,7 @@
   <data name="CGLabel.Text" xml:space="preserve">
     <value>Gra ma za zadanie poprawe refleksu oraz koordynacji wzrokowo ruchowej uzytkownika w oparciu o tabele American Automobile Association Trafic Safety Department. Projekt zwraca uzytkownikowi jego poziom refleksu oraz poinformowac go czy jego czas reakcji jest poprawny tj. nie stanowi potencjalnego zagrozenia w ruchu drogowym.</value>
   </data>
+  <data name="InfoLabel.Text" xml:space="preserve">
+    <value>Gra konczy sie w momencie, gdy na najwyzszym mozliwym poziomie(poziom A) wykonamy sekwencje 10 poprawnych reakcji na kule. W trakcie rozgrywki wchodzimy na poziom wyzej po 15 poprawnych reakcjach na kule, po 3 niepoprawnych spadamy poziom nizej. </value>
+  </data>
 </root>

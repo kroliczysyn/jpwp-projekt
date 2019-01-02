@@ -255,25 +255,25 @@ namespace Orient_
 
         private void CofButton_Click(object sender, EventArgs e)
         {
+            EPLabel.Visible = false;
+            ELabel.Visible = false;
+            DLabel.Visible = false;
+            CLabel.Visible = false;
+            BLabel.Visible = false;
+            ALabel.Visible = false;
             Controls.Remove(poziom);
-            switch (lastBall)
-            {
-                case 0:
-                    this.Controls.Remove(RB);
-                    break;
-                case 1:
-                    this.Controls.Remove(BB);
-                    break;
-                case 2:
-                    this.Controls.Remove(GB);
-                    break;
-                case 3:
-                    this.Controls.Remove(YB);
-                    break;
-            }
+            Controls.Remove(RB);
+            Controls.Remove(GB);
+            Controls.Remove(BB);
+            Controls.Remove(YB);
             CGLabel.Visible = false;
             InfoButton.Visible = true;
             CGButton.Visible = true;
+            IALabel.Visible = false;
+            IQLabel.Visible = false;
+            IPLabel.Visible = false;
+            ILLabel.Visible = false;
+            InfoLabel.Visible = false;
             PBTabelka.Visible = false;
             CofButton.Visible = false;
             Controls.Add(SB);
@@ -293,6 +293,38 @@ namespace Orient_
             CGButton.Visible = false;
             InfoButton.Visible = false;
             CofButton.Visible = true;
+        }
+        private void InfoButton_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void InfoButton_Click_1(object sender, EventArgs e)
+        {
+            Controls.Remove(SB);
+            Controls.Remove(EB);
+            CGButton.Visible = false;
+            InfoButton.Visible = false;
+            CofButton.Visible = true;
+            IALabel.Visible = true;
+            IQLabel.Visible = true;
+            IPLabel.Visible = true;
+            ILLabel.Visible = true;
+            InfoLabel.Visible = true;
+            Controls.Add(RB);
+            Controls.Add(BB);
+            Controls.Add(GB);
+            Controls.Add(YB);
+            RB.Location = new Point(50, 0);
+            BB.Location = new Point(50, 175);
+            GB.Location = new Point(705, 0);
+            YB.Location = new Point(705, 175);
+            EPLabel.Visible = true;
+            ELabel.Visible = true;
+            DLabel.Visible = true;
+            CLabel.Visible = true;
+            BLabel.Visible = true;
+            ALabel.Visible = true;
         }
     }
 }

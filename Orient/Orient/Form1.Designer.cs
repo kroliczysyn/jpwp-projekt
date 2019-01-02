@@ -36,6 +36,17 @@
             this.CofButton = new System.Windows.Forms.Button();
             this.PBTabelka = new System.Windows.Forms.PictureBox();
             this.CGLabel = new System.Windows.Forms.Label();
+            this.IQLabel = new System.Windows.Forms.Label();
+            this.IALabel = new System.Windows.Forms.Label();
+            this.IPLabel = new System.Windows.Forms.Label();
+            this.ILLabel = new System.Windows.Forms.Label();
+            this.InfoLabel = new System.Windows.Forms.Label();
+            this.EPLabel = new System.Windows.Forms.Label();
+            this.ELabel = new System.Windows.Forms.Label();
+            this.DLabel = new System.Windows.Forms.Label();
+            this.CLabel = new System.Windows.Forms.Label();
+            this.BLabel = new System.Windows.Forms.Label();
+            this.ALabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PBTabelka)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +81,7 @@
             this.InfoButton.TabIndex = 1;
             this.InfoButton.Text = "Instrukcja";
             this.InfoButton.UseVisualStyleBackColor = false;
+            this.InfoButton.Click += new System.EventHandler(this.InfoButton_Click_1);
             // 
             // CofButton
             // 
@@ -100,7 +112,7 @@
             this.CGLabel.BackColor = System.Drawing.Color.Transparent;
             this.CGLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CGLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CGLabel.Location = new System.Drawing.Point(253, 290);
+            this.CGLabel.Location = new System.Drawing.Point(251, 290);
             this.CGLabel.Name = "CGLabel";
             this.CGLabel.Size = new System.Drawing.Size(761, 187);
             this.CGLabel.TabIndex = 4;
@@ -108,12 +120,165 @@
             this.CGLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CGLabel.Visible = false;
             // 
+            // IQLabel
+            // 
+            this.IQLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IQLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IQLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.IQLabel.Location = new System.Drawing.Point(225, 88);
+            this.IQLabel.Name = "IQLabel";
+            this.IQLabel.Size = new System.Drawing.Size(350, 50);
+            this.IQLabel.TabIndex = 5;
+            this.IQLabel.Text = "Po pojawieniu sie tej kuli nacisnij \'Q\'";
+            this.IQLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.IQLabel.Visible = false;
+            // 
+            // IALabel
+            // 
+            this.IALabel.BackColor = System.Drawing.Color.Transparent;
+            this.IALabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IALabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.IALabel.Location = new System.Drawing.Point(225, 263);
+            this.IALabel.Name = "IALabel";
+            this.IALabel.Size = new System.Drawing.Size(350, 50);
+            this.IALabel.TabIndex = 6;
+            this.IALabel.Text = "Po pojawieniu sie tej kuli nacisnij \'A\'";
+            this.IALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.IALabel.Visible = false;
+            // 
+            // IPLabel
+            // 
+            this.IPLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IPLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IPLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.IPLabel.Location = new System.Drawing.Point(880, 88);
+            this.IPLabel.Name = "IPLabel";
+            this.IPLabel.Size = new System.Drawing.Size(350, 50);
+            this.IPLabel.TabIndex = 7;
+            this.IPLabel.Text = "Po pojawieniu sie tej kuli nacisnij \'P\'";
+            this.IPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.IPLabel.Visible = false;
+            // 
+            // ILLabel
+            // 
+            this.ILLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ILLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ILLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ILLabel.Location = new System.Drawing.Point(880, 263);
+            this.ILLabel.Name = "ILLabel";
+            this.ILLabel.Size = new System.Drawing.Size(350, 50);
+            this.ILLabel.TabIndex = 8;
+            this.ILLabel.Text = "Po pojawieniu sie tej kuli nacisnij \'L\'";
+            this.ILLabel.Visible = false;
+            // 
+            // InfoLabel
+            // 
+            this.InfoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.InfoLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.InfoLabel.Location = new System.Drawing.Point(12, 350);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(1240, 60);
+            this.InfoLabel.TabIndex = 9;
+            this.InfoLabel.Text = resources.GetString("InfoLabel.Text");
+            this.InfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.InfoLabel.Visible = false;
+            // 
+            // EPLabel
+            // 
+            this.EPLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EPLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EPLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.EPLabel.Location = new System.Drawing.Point(380, 410);
+            this.EPLabel.Name = "EPLabel";
+            this.EPLabel.Size = new System.Drawing.Size(520, 30);
+            this.EPLabel.TabIndex = 10;
+            this.EPLabel.Text = "poziom E+ (xxxx ms) jest niedopuszczalnym rezultatem";
+            this.EPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EPLabel.Visible = false;
+            // 
+            // ELabel
+            // 
+            this.ELabel.BackColor = System.Drawing.Color.Transparent;
+            this.ELabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ELabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ELabel.Location = new System.Drawing.Point(380, 440);
+            this.ELabel.Name = "ELabel";
+            this.ELabel.Size = new System.Drawing.Size(520, 30);
+            this.ELabel.TabIndex = 11;
+            this.ELabel.Text = "poziom E (yyyy ms) jest złym rezultatem";
+            this.ELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ELabel.Visible = false;
+            // 
+            // DLabel
+            // 
+            this.DLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.DLabel.Location = new System.Drawing.Point(380, 470);
+            this.DLabel.Name = "DLabel";
+            this.DLabel.Size = new System.Drawing.Size(520, 30);
+            this.DLabel.TabIndex = 12;
+            this.DLabel.Text = "poziom D (sdad ms) jest miernym rezultatem";
+            this.DLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DLabel.Visible = false;
+            // 
+            // CLabel
+            // 
+            this.CLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.CLabel.Location = new System.Drawing.Point(380, 500);
+            this.CLabel.Name = "CLabel";
+            this.CLabel.Size = new System.Drawing.Size(520, 30);
+            this.CLabel.TabIndex = 13;
+            this.CLabel.Text = "poziom C (eaed ms) jest akceptowalnym rezultatem";
+            this.CLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CLabel.Visible = false;
+            // 
+            // BLabel
+            // 
+            this.BLabel.BackColor = System.Drawing.Color.Transparent;
+            this.BLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BLabel.Location = new System.Drawing.Point(380, 530);
+            this.BLabel.Name = "BLabel";
+            this.BLabel.Size = new System.Drawing.Size(520, 30);
+            this.BLabel.TabIndex = 14;
+            this.BLabel.Text = "poziom B (fege ms) jest dobrym rezultatem";
+            this.BLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BLabel.Visible = false;
+            // 
+            // ALabel
+            // 
+            this.ALabel.BackColor = System.Drawing.Color.Transparent;
+            this.ALabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ALabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ALabel.Location = new System.Drawing.Point(380, 560);
+            this.ALabel.Name = "ALabel";
+            this.ALabel.Size = new System.Drawing.Size(520, 30);
+            this.ALabel.TabIndex = 15;
+            this.ALabel.Text = "poziom A (wdas ms) jest wzorowym rezultatem";
+            this.ALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ALabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Orient_.Properties.Resources.tło_jpwp1280x768;
             this.ClientSize = new System.Drawing.Size(1264, 692);
+            this.Controls.Add(this.ALabel);
+            this.Controls.Add(this.BLabel);
+            this.Controls.Add(this.CLabel);
+            this.Controls.Add(this.DLabel);
+            this.Controls.Add(this.ELabel);
+            this.Controls.Add(this.EPLabel);
+            this.Controls.Add(this.InfoLabel);
+            this.Controls.Add(this.ILLabel);
+            this.Controls.Add(this.IPLabel);
+            this.Controls.Add(this.IALabel);
+            this.Controls.Add(this.IQLabel);
             this.Controls.Add(this.CGLabel);
             this.Controls.Add(this.PBTabelka);
             this.Controls.Add(this.CofButton);
@@ -137,6 +302,17 @@
         private System.Windows.Forms.Button CofButton;
         private System.Windows.Forms.PictureBox PBTabelka;
         private System.Windows.Forms.Label CGLabel;
+        private System.Windows.Forms.Label IQLabel;
+        private System.Windows.Forms.Label IALabel;
+        private System.Windows.Forms.Label IPLabel;
+        private System.Windows.Forms.Label ILLabel;
+        private System.Windows.Forms.Label InfoLabel;
+        private System.Windows.Forms.Label EPLabel;
+        private System.Windows.Forms.Label ELabel;
+        private System.Windows.Forms.Label DLabel;
+        private System.Windows.Forms.Label CLabel;
+        private System.Windows.Forms.Label BLabel;
+        private System.Windows.Forms.Label ALabel;
     }
 }
 
