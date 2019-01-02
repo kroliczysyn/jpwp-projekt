@@ -36,9 +36,9 @@ namespace Orient_
             SB.Click += StartButton_Click;
             Controls.Add(SB);
             Controls.Add(EB);
+            PBTabelka.Visible = false;
             EB.Click += ExitButton_Click;
             CofButton.Visible = false;
-            poziom.KeyUp += poziom_KeyUp;
         }
         public void StartButton_Click(object sender, EventArgs e)
         {
@@ -51,6 +51,7 @@ namespace Orient_
             Controls.Add(poziom);
             Controls.Remove(SB);
             timer1.Enabled = true;
+            //timer1.Start();
         }
         public void ExitButton_Click(object sender, EventArgs e)
         {
@@ -58,11 +59,11 @@ namespace Orient_
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            poziom.KeyUp += poziom_KeyUp;
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (good == 15)
+            if (good == 3)
             {
                 good = 0;
                 if (level == 5)
@@ -89,7 +90,7 @@ namespace Orient_
             switch (level)
             {
                 case 0:
-                    poziom.Enabled = false;
+                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
                     poziom.Text = "Aktualny poziom E+";
                     timer1.Stop();
@@ -97,7 +98,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 1:
-                    poziom.Enabled = false;
+                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
                     poziom.Text = "Aktualny poziom E";
                     timer1.Stop();
@@ -105,7 +106,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 2:
-                    poziom.Enabled = false;
+                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
                     poziom.Text = "Aktualny poziom D";
                     timer1.Stop();
@@ -113,7 +114,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 3:
-                    poziom.Enabled = false;
+                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
                     poziom.Text = "Aktualny poziom C";
                     timer1.Stop();
@@ -121,7 +122,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 4:
-                    poziom.Enabled = false;
+                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
                     poziom.Text = "Aktualny poziom B";
                     timer1.Stop();
@@ -129,7 +130,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 5:
-                    poziom.Enabled = false;
+                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
                     poziom.Text = "Aktualny poziom A";
                     timer1.Stop();
@@ -270,14 +271,28 @@ namespace Orient_
                     this.Controls.Remove(YB);
                     break;
             }
+            CGLabel.Visible = false;
             InfoButton.Visible = true;
             CGButton.Visible = true;
+            PBTabelka.Visible = false;
+            CofButton.Visible = false;
             Controls.Add(SB);
             Controls.Add(EB);
             timer1.Stop();
             timer1.Enabled = false;
             good = 0;
             bad = 0;
+        }
+
+        private void CGButton_Click(object sender, EventArgs e)
+        {
+            CGLabel.Visible = true;
+            PBTabelka.Visible = true;
+            Controls.Remove(SB);
+            Controls.Remove(EB);
+            CGButton.Visible = false;
+            InfoButton.Visible = false;
+            CofButton.Visible = true;
         }
     }
 }
