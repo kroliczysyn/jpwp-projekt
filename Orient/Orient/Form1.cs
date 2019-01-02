@@ -51,7 +51,6 @@ namespace Orient_
             Controls.Add(poziom);
             Controls.Remove(SB);
             timer1.Enabled = true;
-            //timer1.Start();
         }
         public void ExitButton_Click(object sender, EventArgs e)
         {
@@ -59,11 +58,11 @@ namespace Orient_
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-                poziom.KeyUp += poziom_KeyUp;
+                
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (good == 3)
+            if (good == 10)
             {
                 good = 0;
                 if (level == 5)
@@ -90,51 +89,45 @@ namespace Orient_
             switch (level)
             {
                 case 0:
-                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
                     poziom.Text = "Aktualny poziom E+";
                     timer1.Stop();
-                    timer1.Interval = 800;//1000;
+                    timer1.Interval = 700;//1000;
                     timer1.Start();
                     break;
                 case 1:
-                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
                     poziom.Text = "Aktualny poziom E";
-                    timer1.Stop();
-                    timer1.Interval = 750;
-                    timer1.Start();
-                    break;
-                case 2:
-                    //poziom.Enabled = false;
-                    poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
-                    poziom.Text = "Aktualny poziom D";
-                    timer1.Stop();
-                    timer1.Interval = 700;
-                    timer1.Start();
-                    break;
-                case 3:
-                    //poziom.Enabled = false;
-                    poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
-                    poziom.Text = "Aktualny poziom C";
                     timer1.Stop();
                     timer1.Interval = 600;
                     timer1.Start();
                     break;
-                case 4:
-                    //poziom.Enabled = false;
-                    poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
-                    poziom.Text = "Aktualny poziom B";
+                case 2:
+                    poziom.BackColor = Color.FromArgb(255, 226, 180, 11);
+                    poziom.Text = "Aktualny poziom D";
                     timer1.Stop();
                     timer1.Interval = 500;
                     timer1.Start();
                     break;
+                case 3:
+                    poziom.BackColor = Color.FromArgb(255, 211, 234, 7);
+                    poziom.Text = "Aktualny poziom C";
+                    timer1.Stop();
+                    timer1.Interval = 400;
+                    timer1.Start();
+                    break;
+                case 4:
+                    poziom.BackColor = Color.FromArgb(255, 109, 232, 16);
+                    poziom.Text = "Aktualny poziom B";
+                    timer1.Stop();
+                    timer1.Interval = 350;
+                    timer1.Start();
+                    break;
                 case 5:
-                    //poziom.Enabled = false;
                     poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
                     poziom.Text = "Aktualny poziom A";
                     timer1.Stop();
-                    timer1.Interval = 450;
+                    timer1.Interval = 300;
                     timer1.Start();
                     break;
             }
@@ -215,13 +208,14 @@ namespace Orient_
                 CongratsLabel.Visible = true;
             }
         }
-        private void poziom_KeyUp(object sender, KeyEventArgs e)
+      
+        protected override bool ProcessCmdKey(ref Message msg, Keys e)
         {
-            if(check == 0)
+            if (check == 0)
             {
                 if (numer == 0)
                 {
-                    if (e.KeyCode == Keys.Q)
+                    if (e == Keys.Q)
                     {
                         good++;
                         check = 1;
@@ -234,7 +228,7 @@ namespace Orient_
                 }
                 else if (numer == 1)
                 {
-                    if (e.KeyCode == Keys.A)
+                    if (e == Keys.A)
                     {
                         good++;
                         check = 1;
@@ -247,7 +241,7 @@ namespace Orient_
                 }
                 else if (numer == 2)
                 {
-                    if (e.KeyCode == Keys.P)
+                    if (e == Keys.P)
                     {
                         good++;
                         check = 1;
@@ -260,7 +254,7 @@ namespace Orient_
                 }
                 else if (numer == 3)
                 {
-                    if (e.KeyCode == Keys.L)
+                    if (e == Keys.L)
                     {
                         good++;
                         check = 1;
@@ -271,9 +265,10 @@ namespace Orient_
                         check = 1;
                     }
                 }
+                return true;
             }
+            return base.ProcessCmdKey(ref msg, e);
         }
-
         private void CofButton_Click(object sender, EventArgs e)
         {
             EPLabel.Visible = false;
