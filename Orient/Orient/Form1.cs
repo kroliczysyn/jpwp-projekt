@@ -27,6 +27,7 @@ namespace Orient_
         private int lastBall = 0;
         private int lastX = 0;
         private int lastY = 0;
+        private int z = 0;
         public Form1()                     //Definiowanie designu glownego okna
         {
             var bmp = new Bitmap(Orient_.Properties.Resources.tło_jpwp1280x768);
@@ -146,18 +147,19 @@ namespace Orient_
                     break;
             }
             check = 0;
-            int x, y, diffX, diffY = 0;
+            int x = 0;
+            int y = 0;
+            
             x = r.Next(0, 1100);
-            diffX = lastX - x;
-            if (Math.Abs(diffX) < 175)    //zabezpieczenie obiektow w celu nienakladania sie
+            if (z == 0)                            //zabezpieczenie niepokrywania sie elementow
             {
-                x = r.Next(0, 1100);
+                y = r.Next(0, 200);
+                z = 1;
             }
-            y = r.Next(0, 400);
-            diffY = lastY - y;
-            if (Math.Abs(diffY) <175)
+            else if (z == 1)
             {
-                y = r.Next(0, 400);
+                y = r.Next(201, 400);
+                z = 0;
             }
             lastY = y;
             lastX = x;
