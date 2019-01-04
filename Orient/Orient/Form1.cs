@@ -285,6 +285,7 @@ namespace Orient_
         }
         private void CofButton_Click(object sender, EventArgs e)   //definiowanie okna po kliknieciu
         {
+            level = 0;
             EPLabel.Visible = false;
             ELabel.Visible = false;
             DLabel.Visible = false;
