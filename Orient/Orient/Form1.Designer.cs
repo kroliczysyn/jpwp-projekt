@@ -194,7 +194,7 @@
             this.EPLabel.Name = "EPLabel";
             this.EPLabel.Size = new System.Drawing.Size(520, 30);
             this.EPLabel.TabIndex = 10;
-            this.EPLabel.Text = "poziom E+ (xxxx ms) jest niedopuszczalnym rezultatem";
+            this.EPLabel.Text = "poziom E+ (700 ms) jest niedopuszczalnym rezultatem";
             this.EPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.EPLabel.Visible = false;
             // 
@@ -207,7 +207,7 @@
             this.ELabel.Name = "ELabel";
             this.ELabel.Size = new System.Drawing.Size(520, 30);
             this.ELabel.TabIndex = 11;
-            this.ELabel.Text = "poziom E (yyyy ms) jest złym rezultatem";
+            this.ELabel.Text = "poziom E (600 ms) jest złym rezultatem";
             this.ELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ELabel.Visible = false;
             // 
@@ -220,7 +220,7 @@
             this.DLabel.Name = "DLabel";
             this.DLabel.Size = new System.Drawing.Size(520, 30);
             this.DLabel.TabIndex = 12;
-            this.DLabel.Text = "poziom D (sdad ms) jest miernym rezultatem";
+            this.DLabel.Text = "poziom D (500 ms) jest miernym rezultatem";
             this.DLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DLabel.Visible = false;
             // 
@@ -233,7 +233,7 @@
             this.CLabel.Name = "CLabel";
             this.CLabel.Size = new System.Drawing.Size(520, 30);
             this.CLabel.TabIndex = 13;
-            this.CLabel.Text = "poziom C (eaed ms) jest akceptowalnym rezultatem";
+            this.CLabel.Text = "poziom C (400 ms) jest akceptowalnym rezultatem";
             this.CLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CLabel.Visible = false;
             // 
@@ -246,7 +246,7 @@
             this.BLabel.Name = "BLabel";
             this.BLabel.Size = new System.Drawing.Size(520, 30);
             this.BLabel.TabIndex = 14;
-            this.BLabel.Text = "poziom B (fege ms) jest dobrym rezultatem";
+            this.BLabel.Text = "poziom B (350 ms) jest dobrym rezultatem";
             this.BLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BLabel.Visible = false;
             // 
@@ -259,7 +259,7 @@
             this.ALabel.Name = "ALabel";
             this.ALabel.Size = new System.Drawing.Size(520, 30);
             this.ALabel.TabIndex = 15;
-            this.ALabel.Text = "poziom A (wdas ms) jest wzorowym rezultatem";
+            this.ALabel.Text = "poziom A (300 ms) jest wzorowym rezultatem";
             this.ALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ALabel.Visible = false;
             // 

@@ -64,6 +64,17 @@ namespace Orient_
         {
             if (good == 10)
             {
+                //To tylko proba
+                //System.Threading.Thread.Sleep(500);
+                //poziom.Text = "Jajco";
+                //poziom.Location = new Point(500, 500);
+                //System.Threading.Thread.Sleep(500);
+                //poziom.Location = new Point(10, 650);
+
+                //System.Threading.Thread.Sleep(500);
+                CongratsLabel.Visible = true;
+                System.Threading.Thread.Sleep(500);
+                CongratsLabel.Visible = false;
                 good = 0;
                 if (level == 5)
                 {
@@ -92,6 +103,7 @@ namespace Orient_
                     poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
                     poziom.Text = "Aktualny poziom E+";
                     timer1.Stop();
+                    //poziom.Location = new Point(10, 650);
                     timer1.Interval = 700;//1000;
                     timer1.Start();
                     break;
