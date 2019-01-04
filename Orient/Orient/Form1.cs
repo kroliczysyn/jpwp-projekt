@@ -19,15 +19,15 @@ namespace Orient_
         RedBall RB = new RedBall();
         YellowBall YB = new YellowBall();
         Random r = new Random();
-        private int level = 0;
-        private int check = 0;
-        private int numer = 0;
+        private int level = 0;                //ktory poziom
+        private int check = 0;                //tylko jeden przycisk w ticku
+        private int numer = 0;                //ktora kulka
         private int good = 0;
         private int bad = 0;
         private int lastBall = 0;
         private int lastX = 0;
         private int lastY = 0;
-        public Form1()
+        public Form1()                     //Definiowanie designu glownego okna
         {
             var bmp = new Bitmap(Orient_.Properties.Resources.tło_jpwp1280x768);
             this.BackgroundImage = bmp;
@@ -40,7 +40,7 @@ namespace Orient_
             EB.Click += ExitButton_Click;
             CofButton.Visible = false;
         }
-        public void StartButton_Click(object sender, EventArgs e)
+        public void StartButton_Click(object sender, EventArgs e)   //poczatkowy obraz gry
         {
             CofButton.Visible = true;
             InfoButton.Visible = false;
@@ -54,7 +54,7 @@ namespace Orient_
         }
         public void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();                                            //wyjscie
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -67,12 +67,12 @@ namespace Orient_
                 good = 0;
                 if (level == 5)
                 {
-                    level = 5;
+                    level = 5;                                  //ogranicznik poziomu
                 }
                 else
                 {
                     level++;
-                    InfoLevelLabel.Text = "Poziom wyzej! Przyspieszamy!";
+                    InfoLevelLabel.Text = "Poziom wyzej! Przyspieszamy!";     //wstrzymanie programu+komunikat
                     Controls.Add(InfoLevelLabel);
                     InfoLevelLabel.Visible = true;
                     InfoLevelLabel.BringToFront();
@@ -86,12 +86,12 @@ namespace Orient_
                 bad = 0;
                 if (level == 0)
                 {
-                    level = 0;
+                    level = 0;                                   //ogranicznik poziomu
                 }
                 else
                 {
                     level--;
-                    InfoLevelLabel.Text = "Poziom nizej! Zwalniamy!";
+                    InfoLevelLabel.Text = "Poziom nizej! Zwalniamy!"; //wstrzymanie programu + komunikat
                     Controls.Add(InfoLevelLabel);
                     InfoLevelLabel.Visible = true;
                     InfoLevelLabel.BringToFront();
@@ -103,8 +103,8 @@ namespace Orient_
             switch (level)
             {
                 case 0:
-                    poziom.BackColor = Color.FromArgb(255, 255, 0, 0);
-                    poziom.Text = "Aktualny poziom E+";
+                    poziom.BackColor = Color.FromArgb(255, 255, 0, 0);      //definiowanie interwalu timera 
+                    poziom.Text = "Aktualny poziom E+";                     //Oraz zmiana designu textboxa
                     timer1.Stop();
                     timer1.Interval = 700;
                     timer1.Start();
@@ -149,7 +149,7 @@ namespace Orient_
             int x, y, diffX, diffY = 0;
             x = r.Next(0, 1100);
             diffX = lastX - x;
-            if (Math.Abs(diffX) < 175)
+            if (Math.Abs(diffX) < 175)    //zabezpieczenie obiektow w celu nienakladania sie
             {
                 x = r.Next(0, 1100);
             }
@@ -162,7 +162,7 @@ namespace Orient_
             lastY = y;
             lastX = x;
             numer = r.Next(0, 4);
-            switch (lastBall)
+            switch (lastBall)                    //usun poprzednia kulke
             {
                 case 0:
                     this.Controls.Remove(RB);
@@ -177,7 +177,7 @@ namespace Orient_
                     this.Controls.Remove(YB);
                     break;
             }
-            switch (numer)
+            switch (numer)                // dodaj nowa kulke 
             {
                 case 0:
                     RB.Location = new Point(x, y);
@@ -200,7 +200,7 @@ namespace Orient_
                     lastBall = 3;
                     break;
             }
-            if (good == 1 && level == 5)
+            if (good == 1 && level == 5)     //wygrana
             {
                 timer1.Stop();
                 switch (lastBall)
@@ -223,7 +223,7 @@ namespace Orient_
             }
         }
       
-        protected override bool ProcessCmdKey(ref Message msg, Keys e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys e)     //obsluga klawiatury
         {
             if (check == 0)
             {
@@ -283,7 +283,7 @@ namespace Orient_
             }
             return base.ProcessCmdKey(ref msg, e);
         }
-        private void CofButton_Click(object sender, EventArgs e)
+        private void CofButton_Click(object sender, EventArgs e)   //definiowanie okna po kliknieciu
         {
             EPLabel.Visible = false;
             ELabel.Visible = false;
@@ -315,7 +315,7 @@ namespace Orient_
             bad = 0;
         }
 
-        private void CGButton_Click(object sender, EventArgs e)
+        private void CGButton_Click(object sender, EventArgs e)   //definiowanie okna po kliknieciu
         {
             CGLabel.Visible = true;
             PBTabelka.Visible = true;
@@ -330,7 +330,7 @@ namespace Orient_
            
         }
 
-        private void InfoButton_Click_1(object sender, EventArgs e)
+        private void InfoButton_Click_1(object sender, EventArgs e)   //definiowanie okna po kliknieciu
         {
             Controls.Remove(SB);
             Controls.Remove(EB);

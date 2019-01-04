@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Orient_
 {
-    class StartButton : Button
+    class StartButton : Button   //def przycisku
     {
         public StartButton() : base()
         {

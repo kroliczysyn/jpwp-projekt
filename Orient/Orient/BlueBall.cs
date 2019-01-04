@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Orient_
 {
-    class BlueBall : PictureBox
+    class BlueBall : PictureBox                     //definicja wygladu obiektu
     {
         public BlueBall() : base()
         {

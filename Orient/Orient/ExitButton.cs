@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Orient_
 {
-    class ExitButton : Button
+    class ExitButton : Button                            //definicja wygladu
     {
         public ExitButton():base()
         {
