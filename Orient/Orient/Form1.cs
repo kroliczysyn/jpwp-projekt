@@ -72,10 +72,7 @@ namespace Orient_
                 else
                 {
                     level++;
-                    this.Controls.Remove(RB);
-                    this.Controls.Remove(BB);
-                    this.Controls.Remove(GB);
-                    this.Controls.Remove(YB);
+                    InfoLevelLabel.Text = "Poziom wyzej! Przyspieszamy!";
                     Controls.Add(InfoLevelLabel);
                     InfoLevelLabel.Visible = true;
                     InfoLevelLabel.BringToFront();
@@ -94,6 +91,13 @@ namespace Orient_
                 else
                 {
                     level--;
+                    InfoLevelLabel.Text = "Poziom nizej! Zwalniamy!";
+                    Controls.Add(InfoLevelLabel);
+                    InfoLevelLabel.Visible = true;
+                    InfoLevelLabel.BringToFront();
+                    InfoLevelLabel.Update();
+                    System.Threading.Thread.Sleep(1500);
+                    Controls.Remove(InfoLevelLabel);
                 }
             }
             switch (level)
@@ -157,7 +161,7 @@ namespace Orient_
             }
             lastY = y;
             lastX = x;
-            numer = r.Next(0, 1);
+            numer = r.Next(0, 4);
             switch (lastBall)
             {
                 case 0:
