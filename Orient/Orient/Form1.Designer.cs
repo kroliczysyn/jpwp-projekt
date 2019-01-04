@@ -48,6 +48,7 @@
             this.BLabel = new System.Windows.Forms.Label();
             this.ALabel = new System.Windows.Forms.Label();
             this.CongratsLabel = new System.Windows.Forms.Label();
+            this.InfoLevelLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PBTabelka)).BeginInit();
             this.SuspendLayout();
             // 
@@ -276,12 +277,26 @@
             this.CongratsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CongratsLabel.Visible = false;
             // 
+            // InfoLevelLabel
+            // 
+            this.InfoLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.InfoLevelLabel.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoLevelLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.InfoLevelLabel.Location = new System.Drawing.Point(450, 399);
+            this.InfoLevelLabel.Name = "InfoLevelLabel";
+            this.InfoLevelLabel.Size = new System.Drawing.Size(360, 30);
+            this.InfoLevelLabel.TabIndex = 17;
+            this.InfoLevelLabel.Text = "Poziom wyzej! przyspieszamy!";
+            this.InfoLevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.InfoLevelLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Orient_.Properties.Resources.tło_jpwp1280x768;
             this.ClientSize = new System.Drawing.Size(1264, 692);
+            this.Controls.Add(this.InfoLevelLabel);
             this.Controls.Add(this.CongratsLabel);
             this.Controls.Add(this.ALabel);
             this.Controls.Add(this.BLabel);
@@ -330,6 +345,7 @@
         private System.Windows.Forms.Label BLabel;
         private System.Windows.Forms.Label ALabel;
         private System.Windows.Forms.Label CongratsLabel;
+        private System.Windows.Forms.Label InfoLevelLabel;
     }
 }
 

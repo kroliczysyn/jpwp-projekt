@@ -64,17 +64,6 @@ namespace Orient_
         {
             if (good == 10)
             {
-                //To tylko proba
-                //System.Threading.Thread.Sleep(500);
-                //poziom.Text = "Jajco";
-                //poziom.Location = new Point(500, 500);
-                //System.Threading.Thread.Sleep(500);
-                //poziom.Location = new Point(10, 650);
-
-                //System.Threading.Thread.Sleep(500);
-                CongratsLabel.Visible = true;
-                System.Threading.Thread.Sleep(500);
-                CongratsLabel.Visible = false;
                 good = 0;
                 if (level == 5)
                 {
@@ -83,6 +72,16 @@ namespace Orient_
                 else
                 {
                     level++;
+                    this.Controls.Remove(RB);
+                    this.Controls.Remove(BB);
+                    this.Controls.Remove(GB);
+                    this.Controls.Remove(YB);
+                    Controls.Add(InfoLevelLabel);
+                    InfoLevelLabel.Visible = true;
+                    InfoLevelLabel.BringToFront();
+                    InfoLevelLabel.Update();
+                    System.Threading.Thread.Sleep(1500);
+                    Controls.Remove(InfoLevelLabel);
                 }
             }
             if (bad == 5)
@@ -100,15 +99,14 @@ namespace Orient_
             switch (level)
             {
                 case 0:
-                    poziom.BackColor = Color.FromArgb(255, 255, 0, 0);//Maroon;
+                    poziom.BackColor = Color.FromArgb(255, 255, 0, 0);
                     poziom.Text = "Aktualny poziom E+";
                     timer1.Stop();
-                    //poziom.Location = new Point(10, 650);
-                    timer1.Interval = 700;//1000;
+                    timer1.Interval = 700;
                     timer1.Start();
                     break;
                 case 1:
-                    poziom.BackColor = Color.FromArgb(255, 234, 133, 9);//IndianRed;
+                    poziom.BackColor = Color.FromArgb(255, 234, 133, 9);
                     poziom.Text = "Aktualny poziom E";
                     timer1.Stop();
                     timer1.Interval = 600;
@@ -136,7 +134,7 @@ namespace Orient_
                     timer1.Start();
                     break;
                 case 5:
-                    poziom.BackColor = Color.FromArgb(255, 17, 226, 13);//Lime;
+                    poziom.BackColor = Color.FromArgb(255, 17, 226, 13);
                     poziom.Text = "Aktualny poziom A";
                     timer1.Stop();
                     timer1.Interval = 300;
