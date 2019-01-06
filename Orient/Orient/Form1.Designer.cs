@@ -208,7 +208,7 @@
             this.ELabel.Name = "ELabel";
             this.ELabel.Size = new System.Drawing.Size(520, 30);
             this.ELabel.TabIndex = 11;
-            this.ELabel.Text = "poziom E (600 ms) jest złym rezultatem";
+            this.ELabel.Text = "poziom E (600 ms) jest zlym rezultatem";
             this.ELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ELabel.Visible = false;
             // 

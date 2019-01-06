@@ -66,6 +66,7 @@ namespace Orient_
             if (good == 10)
             {
                 good = 0;
+                bad = 0;
                 if (level == 5)
                 {
                     level = 5;                                  //ogranicznik poziomu
@@ -85,6 +86,7 @@ namespace Orient_
             if (bad == 5)
             {
                 bad = 0;
+                good = 0;
                 if (level == 0)
                 {
                     level = 0;                                   //ogranicznik poziomu
